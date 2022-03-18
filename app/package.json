@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "pkg-core": "../pkg-core",
+    "dep-core": "../dep-core",
+    "pkg-rn": "../pkg-rn"
+  },
+  "resolutions": {
+    "dep-dep-core": "../dep-rn"
+  }
+}

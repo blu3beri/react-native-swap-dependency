@@ -1,18 +1,16 @@
 #!/usr/bin/env sh
 
-echo "cleanup"
-rm -rf **/yarn.lock **/node_modules
+clean() {
+  echo "cleanup"
+  rm -rf **/yarn.lock **/node_modules
 
-echo "installing deps..."
-yarn -q --cwd node
-yarn -q --cwd wrapper
-yarn -q --cwd reactnative
+  echo "installing deps..."
+  yarn -q --cwd app 
+}
 
-echo "rn..."
-cd reactnative
-pod install --project-directory=ios/
-cd -
+run() {
+  clean
+  node ./app/index.js
+}
 
-node node/index.js
-echo "SHOULD SAY: node"
-yarn --cwd reactnative ios
+run
