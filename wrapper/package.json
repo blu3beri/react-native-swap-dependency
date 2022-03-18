@@ -1,0 +1,14 @@
+{
+  "name": "wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "node-hello": "../node-hello",
+    "node-injected": "../node-injected"
+  },
+  "react-native": {
+    "node-hello": "node-injected"
+  }
+}
